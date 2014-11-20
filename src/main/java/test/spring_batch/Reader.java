@@ -20,7 +20,7 @@ public class Reader implements ItemReader<Model> {
 
 	private static int COUNTER = 0;
 	private static final int NUM_ENTRIES_PER_FILE = 10;
-	private static final int NUM_FILES = 100000;
+	private static final int NUM_FILES = 1000;
 
 	@Override
 	public Model read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
@@ -31,7 +31,8 @@ public class Reader implements ItemReader<Model> {
 			return null;
 		}
 
-		return new Model(COUNTER);
+		// return new Model(COUNTER);
+		return null;
 	}
 
 	public boolean isDoneWithFile() {

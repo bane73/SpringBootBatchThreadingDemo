@@ -11,27 +11,30 @@ public class Writer implements ItemWriter<Model> {
 
 	@Override
 	public void write(List<? extends Model> models) throws Exception {
-		System.out.println("\n\n*** Writing " + models.size() + " models.");
 
-		int firstId = -1;
-		int lastId = -1;
-		int totalModels = 0;
-		for (int i = 0, j = models.size(); i < j; i++) {
+		// System.out.println("WRITING!  -> " + models.get(0).getName());
 
-			Model m = models.get(i);
-			totalModels++;
-			if (i == 0) {
-				firstId = m.getId();
-			}
-			else if (i == (j - 1)) {
-				lastId = m.getId();
-			}
+		// System.out.println("\n\n*** Writing " + models.size() + " models.");
+		//
+		// int firstId = -1;
+		// int lastId = -1;
+		// int totalModels = 0;
+		// for (int i = 0, j = models.size(); i < j; i++) {
+		//
+		// Model m = models.get(i);
+		// totalModels++;
+		// if (i == 0) {
+		// firstId = m.getId();
+		// }
+		// else if (i == (j - 1)) {
+		// lastId = m.getId();
+		// }
+		//
+		// Writer.models.add(m);
+		// }
 
-			Writer.models.add(m);
-		}
-
-		System.out.println("     Processed " + totalModels + " models with ids " + firstId + "-" + lastId);
-		System.out.println("     System-wide there are " + Writer.models.size() + " models.");
+		// System.out.println("     Processed " + totalModels + " models with ids " + firstId + "-" + lastId);
+		// System.out.println("     System-wide there are " + Writer.models.size() + " models.");
 	}
 
 }
